@@ -9,7 +9,7 @@ const ExerciseCard = ({ exercise }) => (
       <Button
         sx={{
           ml: "21px",
-          color: "#fff",
+          color: "red",
           background: "#FFA9A9",
           fontSize: "14px",
           borderRadius: "20px",
@@ -21,7 +21,7 @@ const ExerciseCard = ({ exercise }) => (
       <Button
         sx={{
           ml: "21px",
-          color: "#fff",
+          color: "white",
           background: "#FCC757",
           fontSize: "14px",
           borderRadius: "20px",
@@ -33,7 +33,7 @@ const ExerciseCard = ({ exercise }) => (
     </Stack>
     <Typography
       ml="21px"
-      color="#000"
+      color="red"
       fontWeight="bold"
       sx={{ fontSize: { lg: "24px", xs: "20px" } }}
       mt="11px"

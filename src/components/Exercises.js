@@ -51,6 +51,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   return (
     <Box id="exercises" sx={{ mt: { lg: "109px" } }} mt="50px" p="20px">
       <Typography
+        color="white"
         variant="h4"
         fontWeight="bold"
         sx={{ fontSize: { lg: "44px", xs: "30px" } }}

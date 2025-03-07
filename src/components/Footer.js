@@ -1,28 +1,147 @@
 import React from "react";
-import { Box, Stack, Typography } from "@mui/material";
+import { Stack, Typography, IconButton, Link } from "@mui/material";
+import { Facebook, Instagram, Twitter, LinkedIn } from "@mui/icons-material";
 import Logo from "../assets/images/Logo-1.png";
 
 const Footer = () => (
-  <Box mt="80px" bgcolor="#FFF3F4">
+  <div
+    style={{
+      background: "linear-gradient(135deg, #FF2625 0%, #FFA9A9 100%)", // Gradient background
+      padding: "40px 20px",
+      color: "#fff",
+      borderTopLeftRadius: "50% 15px", // Creating a curve at the top of the footer
+      borderTopRightRadius: "50% 15px",
+      position: "relative",
+    }}
+  >
+    {/* Upper Section with Logo */}
     <Stack
-      gap="40px"
-      sx={{ alignItems: "center" }}
-      flexWrap="wrap"
-      px="40px"
-      pt="24px"
+      direction="row"
+      alignItems="center"
+      justifyContent="space-between"
+      spacing={4}
+      sx={{ maxWidth: "1200px", margin: "0 auto" }}
     >
-      <img src={Logo} alt="logo" style={{ width: "200px", height: "41px" }} />
+      <div>
+        <img src={Logo} alt="Logo" style={{ width: "180px" }} />
+      </div>
+
+      {/* Social Media Links */}
+      <Stack direction="row" spacing={2}>
+        <IconButton
+          href="https://facebook.com"
+          target="_blank"
+          sx={{ color: "#fff" }}
+        >
+          <Facebook />
+        </IconButton>
+        <IconButton
+          href="https://instagram.com"
+          target="_blank"
+          sx={{ color: "#fff" }}
+        >
+          <Instagram />
+        </IconButton>
+        <IconButton
+          href="https://twitter.com"
+          target="_blank"
+          sx={{ color: "#fff" }}
+        >
+          <Twitter />
+        </IconButton>
+        <IconButton
+          href="https://linkedin.com"
+          target="_blank"
+          sx={{ color: "#fff" }}
+        >
+          <LinkedIn />
+        </IconButton>
+      </Stack>
     </Stack>
-    <Typography
-      variant="h5"
-      sx={{ fontSize: { lg: "28px", xs: "20px" } }}
-      mt="41px"
-      textAlign="center"
-      pb="40px"
+
+    {/* Navigation Links Section */}
+    <Stack
+      direction="row"
+      spacing={4}
+      sx={{
+        mt: 4,
+        maxWidth: "1200px",
+        margin: "0 auto",
+        justifyContent: "center",
+      }}
     >
-      Made with ❤️ by JavaScript Mastery
+      <Link
+        href="#"
+        sx={{
+          color: "#fff",
+          textDecoration: "none",
+          fontSize: "16px",
+          "&:hover": { textDecoration: "underline" },
+        }}
+      >
+        Home
+      </Link>
+      <Link
+        href="#"
+        sx={{
+          color: "#fff",
+          textDecoration: "none",
+          fontSize: "16px",
+          "&:hover": { textDecoration: "underline" },
+        }}
+      >
+        About
+      </Link>
+      <Link
+        href="#"
+        sx={{
+          color: "#fff",
+          textDecoration: "none",
+          fontSize: "16px",
+          "&:hover": { textDecoration: "underline" },
+        }}
+      >
+        Contact
+      </Link>
+      <Link
+        href="#"
+        sx={{
+          color: "#fff",
+          textDecoration: "none",
+          fontSize: "16px",
+          "&:hover": { textDecoration: "underline" },
+        }}
+      >
+        Privacy Policy
+      </Link>
+    </Stack>
+
+    {/* Bottom Section with Copyright */}
+    <Typography
+      sx={{
+        textAlign: "center",
+        mt: 5,
+        fontSize: "14px",
+        opacity: 0.7,
+        fontFamily: "Alegreya, serif",
+      }}
+    >
+      &copy; {new Date().getFullYear()} GymSite. All rights reserved.
     </Typography>
-  </Box>
+
+    {/* Footer Tagline */}
+    <Typography
+      sx={{
+        textAlign: "center",
+        mt: 1,
+        fontSize: "16px",
+        fontWeight: "bold",
+        fontFamily: "Alegreya, serif",
+      }}
+    >
+      Made with ❤️ by GymTech
+    </Typography>
+  </div>
 );
 
 export default Footer;

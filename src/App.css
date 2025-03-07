@@ -1,6 +1,6 @@
 body {
   font-family: "Josefin Sans";
-  background-color: #fffafb;
+  background-color: rgb(15, 14, 14);
 }
 
 * {
@@ -22,7 +22,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ff2625;
+  color: white;
   font-size: 25px;
   border-radius: 4px;
   position: absolute;
@@ -103,7 +103,9 @@ body {
   height: 381px;
   text-decoration: none;
 }
-
+.footerstyle {
+  margin-top: 3rem;
+}
 @media screen and (max-width: 1200px) {
   .detail-image {
     width: 300px;

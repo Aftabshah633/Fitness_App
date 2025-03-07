@@ -10,7 +10,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
       <Typography
         sx={{ fontSize: { lg: "44px", xs: "25px" } }}
         fontWeight={700}
-        color="#000"
+        color="white"
         mb="33px"
       >
         Watch{" "}
@@ -42,7 +42,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
               <Typography
                 sx={{ fontSize: { lg: "28px", xs: "18px" } }}
                 fontWeight={600}
-                color="#000"
+                color="white"
               >
                 {item.video.title}
               </Typography>

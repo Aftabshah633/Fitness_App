@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Stack } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 
 import Logo from "../assets/images/Logo.png";
 
@@ -15,12 +15,27 @@ const Navbar = () => (
     }}
     px="20px"
   >
-    <Link to="/">
+    <Link to="/" style={{ display: "flex", flexDirection: "row" }}>
       <img
         src={Logo}
         alt="logo"
-        style={{ width: "48px", height: "48px", margin: "0px 20px" }}
+        style={{
+          width: "48px",
+
+          height: "48px",
+          margin: "0px 20px",
+        }}
       />
+      <Typography
+        variant="h6"
+        sx={{
+          fontSize: "24px",
+          fontWeight: "700",
+          color: "white", // Text color
+        }}
+      >
+        Gold Gym
+      </Typography>
     </Link>
     <Stack
       direction="row"
@@ -33,13 +48,13 @@ const Navbar = () => (
         to="/"
         style={{
           textDecoration: "none",
-          color: "#3A1212",
+          color: "white",
           borderBottom: "3px solid #FF2625",
         }}
       >
         Home
       </Link>
-      <a href="#exercises" style={{ textDecoration: "none", color: "#3A1212" }}>
+      <a href="#exercises" style={{ textDecoration: "none", color: "white" }}>
         Exercises
       </a>
     </Stack>
